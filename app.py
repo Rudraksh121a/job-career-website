@@ -39,8 +39,8 @@ def hello_web():
                            ,jobs=JOBS,
                            company_name="Job")
 
-@app.route("/jobs")
+@app.route("/api/jobs")
 def list_jobs():
-    return 
+    return  jsonify(JOBS)
 if __name__== "__main__":
     app.run(host='0.0.0.0',debug=True)
